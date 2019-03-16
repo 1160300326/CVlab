@@ -1,0 +1,11 @@
+   #include "stdafx.h"
+   #include "mfcc.h"
+
+
+
+	MFCC m;
+	short da[400];//存放录音数据，400个采样点，本程序现在不支持其它长度
+	float fe[12];//存放提取的MFCC特征，12维，不含能量特征，不含一阶差分和二阶差分
+        m.GetFeature(da, fe, 800); //对语音数据da，提取12维MFCC特征，放入fe中。第三个参数为数据的字节长度
+
+	
